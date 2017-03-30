@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <style>
+            body {
+			  margin: 0;
+			  height: 100vh;
+			  border: 1px solid red;
+			}
+
+			.text {
+			  display: flex;
+			  flex-direction: column;
+			  height: 100%;
+			  width: 100%;
+/*			  z-index: 10;
+*/			  border: 1px solid blue;
+			  position: absolute;
+			  top: 0;
+			}
+
+			h1, p {
+			  margin: auto;
+			}
+
+			h1 {
+			  margin-bottom: 0;
+			}
+
+			p {
+			  margin-top: 1em;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+        </style>
+    </head>
+    <body>
+        
+        <header>
+		  <img src="cat.jpg">
+		  <div class="text">
+		  	<h1>At the center</h1>
+		  	<p>Automatically centered because of the flex property</p>
+		  </div>
+		</header>
+
+       
+    </body>
+</html>

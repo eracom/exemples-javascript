@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>drag and drop</title>
+        
+        <style>
+            body {
+                font-family: "Roboto Mono", monospace;
+            }
+            body {
+              margin: 0;
+              background: paleturquoise;
+            }
+
+            main {
+              border: 1px solid blue;
+              height: 90vh;
+              margin: 5vh;
+              display: flex;
+            }
+
+            section {
+              width: 50%;
+              border: 1px solid grey;
+              padding: 1em;
+              background: papayawhip;
+            }
+
+            p {
+              border: 1px solid magenta;
+              padding: 1em;
+              background: lavender;
+            }
+
+            .dropzone {
+              border: 1px dotted grey;
+              background: whitesmoke;
+              min-height:  5em;
+              margin-bottom: 1em;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <main>
+
+          <section class="elements">
+            <h1>elements</h1>
+            <p id="drag1">element 1</p>
+            <p id="drag2">element 2</p>
+            <p id="drag3">element 3</p>
+          </section>
+
+          <section class="dragcontainer">
+            <h1>drag zone</h1>
+            <div id="dropzone1" class="dropzone" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+            <div id="dropzone2" class="dropzone" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+          </section>
+
+        </main>
+
+        <script>
+
+        // Source: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
+
+        // Rendre les éléments "draggable":
+        var items = document.querySelectorAll(".elements>p");
+        var i;
+        for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('draggable', true);
+            items[i].addEventListener('dragstart', function(){dragstart_handler(event)}, false);
+        }
+
+        function dragstart_handler(ev) {
+         // console.log("dragStart");
+         // Add the target element's id to the data transfer object
+         ev.dataTransfer.setData("text/plain", ev.target.id);
+         ev.dropEffect = "move";
+        }
+
+        function dragover_handler(ev) {
+         ev.preventDefault();
+         // Set the dropEffect to move
+         ev.dataTransfer.dropEffect = "move";
+        }
+
+        function drop_handler(ev) {
+         ev.preventDefault();
+         // Get the id of the target and add the moved element to the target's DOM
+         var data = ev.dataTransfer.getData("text");
+         ev.target.appendChild(document.getElementById(data));
+         console.log("moved "+data+ " to "+ev.target.id);
+        }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        
+        <style>
+            body {
+                font-family: "Roboto Mono";
+            }
+            body {
+              margin: 0
+            }
+
+            main {
+              border: 1px solid blue;
+              height: 90vh;
+              margin: 5vh;
+            }
+
+            .box {
+              border: 1px solid magenta;
+              width: 25vw;
+              height: 25vh;
+              margin: 0;
+              position: absolute;
+            }
+
+            .pos1 {
+              left: 20%;
+              top: 10%;
+            }
+
+            .pos2 {
+              left: 60%;
+              top: 20%;
+            }
+
+            .pos3 {
+              left: 10%;
+              top: 50%;
+            }
+
+            .pos4 {
+              left: 40%;
+              top: 60%;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <main>
+          <p class="box pos1">one</p>
+          <p class="box pos2">two</p>
+          <p class="box pos3">three</p>
+        </main>
+
+
+        <script>
+
+            // randomize the order...
+
+            function shuffle(a) {
+                for (let i = a.length; i; i--) {
+                    let j = Math.floor(Math.random() * i);
+                    [a[i - 1], a[j]] = [a[j], a[i - 1]];
+                }
+            }
+
+            // Source: http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+
+            var numbers = ['1','2','3','4'];
+            shuffle(numbers);
+
+            // Ajouter les classes CSS
+
+            var boxes = document.getElementsByClassName("box");
+            var i;
+
+            for (i = 0; i < boxes.length; i++) {
+
+                // boxes[i].style.backgroundColor = "red";
+                //boxes[i].className = "pos3";
+                boxes[i].className = "box pos"+numbers[i];
+            }
+
+        </script>
+    </body>
+</html>
