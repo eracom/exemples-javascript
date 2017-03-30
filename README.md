@@ -1,8 +1,10 @@
 <h1>Exemples de code JavaScript</h1>
 
-Voici des exemples de code visant à démontrer un comportement de la manière la plus claire et simple. Pour voir le code, regardez la source de la page (chaque page inclut le CSS et JavaScript).
+Voici des exemples de code visant à démontrer un comportement de la manière la plus claire et simple. 
 
-<h3>[basic.html](basic.html)</h3>
+Pour voir le code, regardez la source de la page (chaque page inclut le CSS et JavaScript).
+
+### [basic.html](basic.html)
 
 Exemple utilisant jQuery pour générer une phrase.
 
