@@ -7,7 +7,9 @@
             body {
 			  margin: 0;
 			  height: 100vh;
-			  border: 1px solid red;
+			  background: salmon;
+			  font-family: "Roboto Mono", monospace;
+			  color: fuchsia;
 			}
 
 			.text {
@@ -15,14 +17,13 @@
 			  flex-direction: column;
 			  height: 100%;
 			  width: 100%;
-/*			  z-index: 10;
-*/			  border: 1px solid blue;
 			  position: absolute;
 			  top: 0;
 			}
 
 			h1, p {
 			  margin: auto;
+			  background: rgba(0,0,0,0.3)
 			}
 
 			h1 {
@@ -37,19 +38,18 @@
 				width: 100%;
 				height: 100%;
 				display: block;
+				object-fit: cover;
 			}
 
         </style>
     </head>
     <body>
         
-        <header>
 		  <img src="cat.jpg">
 		  <div class="text">
 		  	<h1>At the center</h1>
 		  	<p>Automatically centered because of the flex property</p>
 		  </div>
-		</header>
 
        
     </body>
