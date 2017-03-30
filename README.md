@@ -4,6 +4,8 @@ Voici des exemples de code visant à démontrer un comportement de la manière l
 
 Pour voir le code, regardez la source de la page (chaque page inclut le CSS et JavaScript).
 
+---
+
 ### [basic.html](basic.html)
 
 Exemple utilisant jQuery pour générer une phrase.
@@ -26,6 +28,10 @@ JavaScript pur, garanti sans jQuery.
 
 ### [flexbox.html](flexbox.html)
 
-Exemple utilisant Flexbox pour le centrage vertical. Utilise également `object-fit` pour une image plein-écran.
+Exemple utilisant Flexbox pour un centrage vertical. Utilise la propriété CSS `object-fit` pour une image plein-écran.
 
 ---
+
+### [drag-and-drop.html](drag-and-drop.html)
+
+Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). JavaScript pur, sans jQuery.
