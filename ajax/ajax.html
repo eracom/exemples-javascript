@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>basic</title>
+        <title>AJAX</title>
         <meta charset="UTF-8">
 
         <script src="../jquery-3.1.1.min.js"></script>
@@ -45,7 +45,8 @@
             });
 
             $('#button').click(function(){ // info
-                var toLoad = $(this).children("a").attr('href')+' #content';
+                var toLoad = $(this).attr('href')+' #content';
+                console.log('target: '+toLoad);
                 $('#container').html('<div class="ajax-loading"></div>');
                 $('#container').load(toLoad, function() {
                     $('#container').show('fast');
