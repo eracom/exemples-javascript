@@ -45,7 +45,7 @@
             });
 
             $('#button').click(function(){ // info
-                var toLoad = $(this).children("a").attr('href')+' #main';
+                var toLoad = $(this).children("a").attr('href')+' #content';
                 $('#container').html('<div class="ajax-loading"></div>');
                 $('#container').load(toLoad, function() {
                     $('#container').show('fast');
