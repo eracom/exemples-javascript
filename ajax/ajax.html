@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>basic</title>
+        <meta charset="UTF-8">
+
+        <script src="../jquery-3.1.1.min.js"></script>
+        
+        <style>
+            body {
+                font-family: Georgia, "Times New Roman", Serif;
+                padding: 5vmin;
+            }
+
+            #button {
+                margin-bottom: 2em;
+                font-size: 150%;
+                display: block;
+            }
+
+            #container {
+                background: silver;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>AJAX in action</h1>
+
+        <a href="content.html" id="button">Load Content</a>
+
+        <div id="container">empty container</div>
+
+        <script>
+
+            var container = $('#container');
+
+            $.ajaxSetup({
+                timeout:5000,
+                error: function(req,error){
+                  if(error === 'error'){error = req.statusText;}
+                  var errormsg = 'There was a communication error: '+error;
+                  container.html('<div class="ajax-error font-norm">'+errormsg+'</div>');
+                }
+            });
+
+            $('#button').click(function(){ // info
+                var toLoad = $(this).children("a").attr('href')+' #main';
+                $('#container').html('<div class="ajax-loading"></div>');
+                $('#container').load(toLoad, function() {
+                    $('#container').show('fast');
+                    });
+                return false;
+            }); // end of first part
+
+
+        </script>
+    </body>
+</html>

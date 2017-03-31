@@ -7,9 +7,7 @@
             body {
 			  margin: 0;
 			  height: 100vh;
-			  background: salmon;
 			  font-family: "Roboto Mono", monospace;
-			  color: fuchsia;
 			}
 
 			.text {
@@ -22,8 +20,10 @@
 			}
 
 			h1, p {
+			  color: fuchsia;
 			  margin: auto;
-			  background: rgba(0,0,0,0.3)
+			  background: rgba(0,0,0,0.3);
+			  max-width: 90%;
 			}
 
 			h1 {
@@ -35,10 +35,9 @@
 			}
 
 			img {
-				width: 100%;
-				height: 100%;
-				display: block;
-				object-fit: cover;
+			  width: 100%;
+			  height: 100%;
+			  object-fit: cover;
 			}
 
         </style>
@@ -50,7 +49,6 @@
 		  	<h1>At the center</h1>
 		  	<p>Automatically centered because of the flex property</p>
 		  </div>
-
        
     </body>
 </html>
