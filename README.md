@@ -22,8 +22,6 @@ Exemple qui génère 360 boîtes avec des couleurs différentes (les 360 degrés
 
 Exemple qui génère trois boîtes, et leur donne des positions aléatoires ... on utilise quatre positions pré-définies, attribuées de manière aléatoire.
 
-JavaScript pur, garanti sans jQuery.
-
 ---
 
 ### [flexbox.html](flexbox.html)
@@ -34,4 +32,12 @@ Exemple utilisant Flexbox pour un centrage vertical. Utilise la propriété CSS 
 
 ### [drag-and-drop.html](drag-and-drop.html)
 
-Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). JavaScript pur, sans jQuery.
+Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
+
+---
+
+### [flicker.html](flicker.html)
+
+Exemple qui produit un clignotement, en utilisant la méthode setTimeout().
+
+---

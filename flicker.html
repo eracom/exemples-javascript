@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>flickr</title>
+        <meta charset="UTF-8">
+        
+        <style>
+            button {
+              font-size: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <button type="button">Click me</button>
+
+        <script>
+
+              var button = document.querySelector("button");
+
+              var body = document.querySelector("body");
+
+              button.addEventListener("click", strobo);
+
+              var interval = ( 150 );
+
+              function strobo() {
+
+                setTimeout( function(){
+                  body.style.backgroundColor = "red";
+                },interval);
+
+                setTimeout( function(){
+                  body.style.backgroundColor = "white";
+                },interval*2);
+
+                setTimeout( function(){
+                  body.style.backgroundColor = "red";
+                },interval*3);
+
+                setTimeout( function(){
+                  body.style.backgroundColor = "white";
+                },interval*4);
+
+              }
+                
+        </script>
+    </body>
+</html>
