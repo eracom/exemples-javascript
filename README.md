@@ -41,3 +41,9 @@ Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla]
 Exemple qui produit un clignotement, en utilisant la méthode setTimeout().
 
 ---
+
+### [ajax/ajax.html](ajax.html)
+
+Exemple qui charge du contenu dynamiquement, avec la technique AJAX. Utilise [la méthode load](http://api.jquery.com/load/) de jQuery.
+
+---
