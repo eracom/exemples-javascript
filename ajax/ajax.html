@@ -12,10 +12,21 @@
                 padding: 5vmin;
             }
 
-            #button {
+            .menu {
+                list-style: none;
+                padding: 0;
                 margin-bottom: 2em;
+            }
+
+            .menu li {
+                display: inline;
+                margin-right: 1em;
                 font-size: 150%;
-                display: block;
+            }
+
+            .button {
+                
+                
             }
 
             #container {
@@ -28,8 +39,11 @@
     <body>
         
         <h1>AJAX in action</h1>
-
-        <a href="content.html" id="button">Load Content</a>
+        
+        <ul class="menu">
+            <li><a href="content1.html" class="button">Contenu 1</a></li>
+            <li><a href="content2.html" class="button">Contenu 2</a></li>
+        </ul>
 
         <div id="container">empty container</div>
 
@@ -46,7 +60,7 @@
                 }
             });
 
-            $('#button').click(function(){ // info
+            $('.button').click(function(){ // info
                 var toLoad = $(this).attr('href')+' #content';
                 console.log('target: '+toLoad);
                 $('#container').html('<div class="ajax-loading"></div>');
