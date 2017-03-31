@@ -42,7 +42,7 @@ Exemple qui produit un clignotement, en utilisant la méthode setTimeout().
 
 ---
 
-### [ajax/ajax.html](ajax.html)
+### [ajax.html](ajax/ajax.html)
 
 Exemple qui charge du contenu dynamiquement, avec la technique AJAX. Utilise [la méthode load](http://api.jquery.com/load/) de jQuery.
 
