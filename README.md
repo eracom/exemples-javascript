@@ -1,4 +1,4 @@
-<h1>Exemples de code JavaScript</h1>
+# Exemples de code JavaScript
 
 Voici des exemples de code visant à démontrer un comportement de la manière la plus claire et simple. 
 
