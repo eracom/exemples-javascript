@@ -26,7 +26,7 @@ Exemple qui génère trois boîtes, et leur donne des positions aléatoires ... 
 
 ### [flexbox.html](flexbox.html)
 
-Exemple utilisant Flexbox pour un centrage vertical. Utilise la propriété CSS `object-fit` pour une image plein-écran.
+Exemple CSS utilisant Flexbox pour un centrage vertical. Utilise la propriété CSS `object-fit` pour une image plein-écran. Cet exemple contient 0% de JavaScript.
 
 ---
 
@@ -38,8 +38,7 @@ Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla]
 
 ### [flicker.html](flicker.html)
 
-Exemple qui produit un clignotement, en utilisant la méthode setTimeout().
-
+Exemple qui produit un clignotement, en utilisant la méthode `setTimeout()`.
 ---
 
 ### [ajax.html](ajax/ajax.html)
