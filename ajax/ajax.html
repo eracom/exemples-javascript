@@ -63,10 +63,11 @@
             $('.button').click(function(){ // info
                 var toLoad = $(this).attr('href')+' #content';
                 console.log('target: '+toLoad);
+
                 $('#container').html('<div class="ajax-loading"></div>');
                 $('#container').load(toLoad, function() {
-                    $('#container').show('fast');
-                    });
+                    $('#container').show('slow');
+                });
                 return false;
             }); // end of first part
 
