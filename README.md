@@ -39,6 +39,7 @@ Exemple utilisant la HTML Drag and Drop API, selon la [documentation de Mozilla]
 ### [flicker.html](flicker.html)
 
 Exemple qui produit un clignotement, en utilisant la méthode `setTimeout()`.
+
 ---
 
 ### [ajax.html](ajax/ajax.html)
