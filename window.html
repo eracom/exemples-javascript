@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <title>basic</title>
+        <meta charset="UTF-8">
+
+        <script src="jquery-3.1.1.min.js"></script>
+        
+        <style>
+            body {
+                font-family: "Roboto Mono";
+                margin: 0;
+            }
+
+			#container {
+				box-shadow: 0px 0px 0px 10px cyan inset ;
+				height: 100vh;
+			}
+
+			ul {
+				margin: 0;
+			}
+
+			.values {
+				position: relative;
+				top: 20px;
+				width: 70%;
+			}
+
+			.center,
+			.bottom-right {
+				position: absolute;
+				padding: 0.5em;
+				background: yellow;
+				line-height: 1
+			}
+
+			.center {
+				top: calc(50vh - 1.5em);
+				left: calc(50vw - 5em);
+				width: 10em;
+			}
+
+			.bottom-right {
+				right: 10px;
+				bottom: 10px;
+			}
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="container">
+			
+			<div class="values">
+				<ul>
+					<li>La hauteur de la fenêtre, selon JavaScript: <span class="screenh"></span></li>
+					<li>La hauteur de #container, selon jQuery: <span class="containerh"></span></li>
+				</ul>
+            </div>
+
+			<div class="center">
+				positionné au centre avec calc(50vw - 5em)
+            </div>
+
+            <div class="bottom-right">
+				placé en bas à droite
+            </div>
+
+        </div>
+
+        <script>
+        	
+        	function mesurerFenetre() {
+            
+        		// obtenir la hauteur de la fenêtre avec JavaScript:
+
+	        	var jsWinHeight = window.innerHeight;
+	        	
+	        	// afficher ce chiffre:
+	        	document.querySelector(".screenh").innerHTML = jsWinHeight+'px';
+
+	        	// obtenir la hauteur de #container avec jQuery
+
+	        	var jqWinHeight = $('#container').height();
+
+	        	// afficher ce chiffre:
+	        	$('.containerh').html(jqWinHeight+'px');
+
+	        	// repositionner .center précisément:
+	        	var centerHeight = $('.center').height();
+	        	var centerPos = (jqWinHeight /2) - (centerHeight /2);
+	        	$('.center').css({ 'top' : centerPos+'px' });
+
+        	}
+
+        	// exécuter la fonction au chargement:
+
+        	window.onload = mesurerFenetre;
+
+        	// exécuter la fonction au redimensionnement:
+
+        	window.onresize = mesurerFenetre;
+
+        </script>
+    </body>
+</html>
