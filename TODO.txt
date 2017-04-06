@@ -1,0 +1,11 @@
+# Exercices à créer:
+
+- Gestures: exemples de click, hover, etc.
+
+- Vh et Vw: test des unités Vh et Vw, et autres méthodes pour mesurer la fenêtre active.
+
+- Un carousel d'images
+
+- Un compteur de score
+
+***

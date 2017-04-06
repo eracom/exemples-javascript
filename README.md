@@ -47,3 +47,15 @@ Exemple qui produit un clignotement, en utilisant la méthode `setTimeout()`.
 Exemple qui charge du contenu dynamiquement, avec la technique AJAX. Utilise [la méthode load](http://api.jquery.com/load/) de jQuery.
 
 ---
+
+### [window.html](window.html)
+
+Exemple qui mesure la hauteur de la fenêtre du navigateur.
+
+---
+
+### [clavier.html](clavier.html)
+
+Exemple qui mesure la hauteur de la fenêtre du navigateur.
+
+---
