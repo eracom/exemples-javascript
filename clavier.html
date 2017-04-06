@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>clavier</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family: "Roboto Mono", sans-serif;
+            }
+
+			p {
+				padding: 1em;
+			}
+
+        </style>
+    </head>
+    <body>
+        
+        <p>
+			Tapez sur le clavier
+        </p>
+
+        <script>
+
+        // 1: On définit la fonction Dactylo
+
+        	function Dactylo(KeyEvent) {
+
+        		// on récupère le caractère saisi
+			    var myChar = String.fromCharCode(KeyEvent.which);
+			    
+			    // on affiche le caractère
+                document.querySelector("p").innerHTML = myChar;
+			
+			}
+
+        // 2: On déclenche la fonction dès qu'un caractère est entré.
+
+        	document.onkeypress = Dactylo;
+
+        </script>
+    </body>
+</html>
