@@ -9,6 +9,7 @@
             body {
                 margin: 0;
                 font-family: sans-serif;
+                background: #666;
             }
             
             .box {
@@ -18,7 +19,7 @@
               float: left;
               color: white;
               text-align: center;
-              line-height: 4
+              line-height: 4;
             }
 
             .box:hover {
@@ -49,18 +50,18 @@
 
                 var hue = i;
 
-                var bg = "background-color: hsl("+hue+", 100%, 50%);";
+                var bg = "hsl("+hue+", 100%, 50%)";
 
                 // Méthode jQuery:
 
-                // var box = "<div class=box style='"+bg+"'>"+hue+"</div>";
+                // var box = "<div class=box style='background-color:"+bg+"'>"+hue+"</div>";
                 // $("body").append(box);
                 
                 // Methode Vanilla JavaScript:
 
                 var box = document.createElement('div');
                 box.className = "box";
-                box.style = bg;
+                box.style.backgroundColor = bg;
                 box.innerHTML = hue;
                 
                 document.querySelector("body").appendChild(box);
