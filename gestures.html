@@ -22,13 +22,14 @@
             }
 
 
-            .events {
+            .events, .observations {
                 border: 1px solid gray;
                 margin: 1.5em 0 0 0;
                 padding: 1em;
+                max-width: 50em;
             }
 
-            .events ul {
+            ul {
               padding-left: 1.5em;
             }
 
@@ -89,6 +90,19 @@
        </ul>
        </div>
 
+       <div class="observations">
+         <h1>Observations:</h1>
+         <ul>
+            <li><b>js:click</b> = fonctionne parfaitement sur tablette iOS.</li>
+            <li><b>js:mouseover</b> = fonctionne sur tablette iOS comme un click. Le mouseout se produit lorsqu'on touche un autre élément cliquable.</li>
+            <li><b>js:focus/blur</b> = l'évenement n'est pas capté, aucun effet sur tablette iOS.</li>
+            <li><b>css:hover</b> = fonctionne sur tablette iOS comme js:mouseover/mouseout - le hover reste actif jusqu'à ce qu'on touche un autre élément cliquable.</li>
+            <li><b>css:focus</b> = pas d'effet visible sur tablette iOS. Voir <a href="http://stackoverflow.com/questions/3885018/active-pseudo-class-doesnt-work-in-mobile-safari">stackoverflow</a></li>
+
+            Note sur iOS: "the :active pseudo state is triggered only when there is a touch event set on the HTML element—for example, when ontouchstart is set on the element."
+         </ul>
+       </div>
+
         <script>
 
         // On mesure les clics :
@@ -121,6 +135,8 @@
           "blur", blurring, false
         );
         var NumberOfBlurs = 0;
+
+        document.querySelector(".jsfocus").ontouchstart;
 
         // mousedown, 
         // mousemove, 
