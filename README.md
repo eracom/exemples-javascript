@@ -56,6 +56,10 @@ Exemple qui mesure la hauteur de la fenêtre du navigateur.
 
 ### [clavier.html](clavier.html)
 
-Exemple qui mesure la hauteur de la fenêtre du navigateur.
+Exemple d'interaction avec le clavier.
 
 ---
+
+### [gestures.html](gestures.html)
+
+Exemples d'interactions tactile.
