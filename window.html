@@ -18,6 +18,11 @@
 				height: 100vh;
 			}
 
+			#jscontainer {
+				box-shadow: 0px 0px 0px 20px rgba(255, 160, 0, 0.5) inset;
+				height: 100px;
+			}
+
 			ul {
 				margin: 0;
 			}
@@ -43,8 +48,8 @@
 			}
 
 			.bottom-right {
-				right: 10px;
-				bottom: 10px;
+				right: 0px;
+				bottom: 0px;
 			}
 
         </style>
@@ -52,22 +57,24 @@
     <body>
         
         <div id="container">
-			
-			<div class="values">
-				<ul>
-					<li>La hauteur de la fenêtre, selon JavaScript: <span class="screenh"></span></li>
-					<li>La hauteur de #container, selon jQuery: <span class="containerh"></span></li>
-				</ul>
-            </div>
+	        <div id="jscontainer">
+				
+				<div class="values">
+					<ul>
+						<li>La hauteur de la fenêtre, selon JavaScript: <span class="screenh"></span></li>
+						<li>La hauteur de #container, selon jQuery: <span class="containerh"></span></li>
+					</ul>
+	            </div>
 
-			<div class="center">
-				positionné au centre avec calc(50vw - 5em)
-            </div>
+				<div class="center">
+					positionné au centre avec calc(50vw - 5em)
+	            </div>
 
-            <div class="bottom-right">
-				placé en bas à droite
-            </div>
+	            <div class="bottom-right">
+					placé en bas à droite
+	            </div>
 
+			</div>
         </div>
 
         <script>
@@ -80,6 +87,10 @@
 	        	
 	        	// afficher ce chiffre:
 	        	document.querySelector(".screenh").innerHTML = jsWinHeight+'px';
+
+	        	// appliquer cette hauteur à #jscontainer
+
+	        	document.getElementById("jscontainer").style.height = jsWinHeight+'px';
 
 	        	// obtenir la hauteur de #container avec jQuery
 
@@ -102,6 +113,11 @@
         	// exécuter la fonction au redimensionnement:
 
         	window.onresize = mesurerFenetre;
+
+        	// note: 
+        	// sur un iPad vertical, la fenêtre selon javascript (window.innerHeight) est de 928 pixels.
+        	// mais la hauteur de #container est de 985 px.
+        	// la différence (57 px) peut s'expliquer par la hauteur de la barre de navigation.
 
         </script>
     </body>
