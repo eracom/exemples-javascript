@@ -62,4 +62,10 @@ Exemple d'interaction avec le clavier.
 
 ### [gestures.html](gestures.html)
 
-Exemples d'interactions tactile.
+Exemples d'interactions tactiles.
+
+---
+
+### [streetview.html](streetview.html)
+
+Utilisation de Google Maps et Streetview.
