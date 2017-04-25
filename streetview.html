@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <title>Google Streetview</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
         <style>
          
             html {
 		        height: 100%;
 		        margin: 0;
 		        padding: 0;
+		        font-family: 'Work Sans', sans-serif;
 		        background: white;
 		    }
 
@@ -25,6 +27,12 @@
 		        background: beige;
 		    }
 
+		    #infos {
+				max-width: 30em;
+				padding: 2em;
+				clear: both;
+		    }
+
         </style>
     </head>
     <body>
@@ -32,26 +40,28 @@
         <div id="map"></div>
     	<div id="pano"></div>
 		
-		<h1>NOTE:</h1>
-		<p> 
-	      Ce code provient d'un exemple 
-	      <a href="https://developers.google.com/maps/documentation/javascript/examples/streetview-simple?hl=fr">fourni par Google</a>.
-	     </p>
+		<div id="infos">
+			<h1>NOTE:</h1>
+			<p> 
+		      Ce code provient d'un exemple 
+		      <a href="https://developers.google.com/maps/documentation/javascript/examples/streetview-simple?hl=fr">fourni par Google</a>.
+		     </p>
 
-	    <p>La partie YOUR_API_KEY doit être remplacée par un code personnel. 
-	      C'est une méthode utilisée par Google pour contrôler l'accès à ses services 
-	      et prévenir des usages abusifs (trop grand nombre de connexions).
+		    <p>La partie YOUR_API_KEY doit être remplacée par un code personnel. 
+		      C'est une méthode utilisée par Google pour contrôler l'accès à ses services 
+		      et prévenir des usages abusifs (trop grand nombre de connexions).
 
-	    <p>Voici l'endroit où vous pouvez créer une clé API pour Streetview:
-	      https://console.developers.google.com/
+		    <p>Voici l'endroit où vous pouvez créer une clé API pour Streetview:
+		      <a href="https://console.developers.google.com/">https://console.developers.google.com/</a>
 
-	    <ul>
-	    	<li>Aller sous API Manager > Credentials.</li>
-	      	<li>Vous devrez commencer par créer un "Project".</li>
-	      	<li>Ensuite vous pourrez créer un "API Key".</li>
-	      	<li>Une fois créé, il faut activer les API souhaitées.</li>
-	      	<li>pour cet exemple, c'est la "Google Maps Embed API".</li>
-		</p>
+		    <ul>
+		    	<li>Aller sous <i>API Manager > Credentials</i>.</li>
+		      	<li>Vous devrez commencer par créer un "Project".</li>
+		      	<li>Ensuite vous pourrez créer un "API Key".</li>
+		      	<li>Une fois créé, il faut activer les API souhaitées.</li>
+		      	<li>Pour cet exemple, c'est la "Google Maps Embed API".</li>
+			</p>
+		</div>
 
 		<script>
 
