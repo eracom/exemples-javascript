@@ -69,3 +69,9 @@ Exemples d'interactions tactiles.
 ### [streetview.html](streetview.html)
 
 Utilisation de Google Maps et Streetview.
+
+---
+
+### [sliders.html](sliders.html)
+
+Des sliders html modifient la couleur de fond (dégradé CSS).
