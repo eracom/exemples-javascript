@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+        <title>animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+
+            body {
+                font-family: "Roboto Mono", sans-serif;
+                font-size: 120%;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+
+			.object, .focus {
+				padding: 0.1em;
+                border: 2px solid red;
+                width: 5em;
+                height: 5em;
+                background: #ddd;
+                margin: auto;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+			}
+			
+			a {
+				display: block;	
+			}
+
+			button {
+				width: 5em;
+				display: block;
+				margin: auto;
+				font-family: "Roboto Mono", sans-serif;
+                font-size: 100%;
+			}
+			
+			.object:hover, .runpulse {
+				animation-name: pulse;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+			}
+			
+			.focus:focus, .runfocus {
+				animation-name: grow;
+				animation-duration: 1s;
+				animation-iteration-count: 1;
+				animation-fill-mode: both;
+			}
+			
+			@keyframes grow {
+				
+				to {
+					transform: scale(1.2);
+					transform: translateX(25px) rotate(-45deg);
+					background-color: green;
+					color: white;
+				}
+			}
+			
+			@keyframes pulse {
+			    0%, 100% {
+			        transform: none;
+			        background-color: #ddd;
+			        animation-timing-function: linear;
+			    }
+			    50% {
+			        transform: scale(1.5) rotate(90deg);
+			        background-color: orange;
+			        animation-timing-function: linear;
+			    }
+			    100% {
+			        transform: scale(1) rotate(180deg);
+			    }
+			}
+			
+			
+        </style>
+    </head>
+    <body>
+        
+        <div class="object">
+			:hover
+        </div>
+        
+        <a href="#" class="focus">:focus</a>
+
+        <button class="button">run</button>
+
+        <script>
+
+        	document.querySelector("button").addEventListener( "click", function(){
+        		
+        		var o = document.querySelector(".object");
+
+        		var f = document.querySelector(".focus");
+
+        		// Launch animation with JavaScript!
+
+        		o.style.animationName = "pulse";
+        		o.style.animationDuration = "1s";
+        		o.style.animationIterationCount = "infinite";
+
+        		// f.style.animationName = "grow";
+        		// f.style.animationDuration = "1s";
+        		// f.style.animationIterationCount = "1";
+        		// f.style.animationFillMode = "both";
+
+        		// Another method: add class "runpulse"
+				f.className += " runfocus";
+        	
+        	});
+
+        </script>
+    </body>
+</html>

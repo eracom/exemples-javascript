@@ -75,3 +75,11 @@ Utilisation de Google Maps et Streetview.
 ### [sliders.html](sliders.html)
 
 Des sliders html modifient la couleur de fond (dégradé CSS).
+
+---
+
+### [animation.html](animation.html)
+
+Un exemple d'animation CSS.
+
+---
