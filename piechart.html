@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+
+            body {
+                font-family: "Roboto Mono", sans-serif;
+                font-size: 120%;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+
+			.pie {
+                width: 50vmin; 
+                height: 50vmin; 
+                border-radius: 50%; 
+                background: yellowgreen;
+                margin: auto;
+
+                background-image: linear-gradient(to right, transparent 50%, #655 0);
+                overflow: hidden;
+			}
+
+			.pie::before { 
+				content: '';
+				display: block; 
+				margin-left: 50%; 
+				height: 100%;
+				border-radius: 0 100% 100% 0 / 50%;
+				background-color: inherit;
+				transform-origin: left;
+				animation: spin 2s linear infinite, bg 4s step-end infinite;
+
+				animation-delay: inherit;
+			}
+
+
+			@keyframes spin {
+				to { transform: rotate(.5turn); }
+			}
+
+			@keyframes bg {
+				50% { background: #655; }
+			}
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="pie">
+			
+        </div>
+        
+
+
+        <script>
+
+
+        </script>
+    </body>
+</html>

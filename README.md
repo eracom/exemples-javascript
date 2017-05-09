@@ -83,3 +83,9 @@ Des sliders html modifient la couleur de fond (dégradé CSS).
 Un exemple d'animation CSS.
 
 ---
+
+### [piechart.html](piechart.html)
+
+Un graphique animé en CSS, selon un exemple de Lea Verou.
+
+---
