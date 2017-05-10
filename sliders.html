@@ -6,6 +6,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>            
+                
+                body {
+
+                    margin: 0;
+                }
                 #sky {
                     height: 100%;
                     width: 100%;
@@ -26,7 +31,7 @@
                     background: linear-gradient(150deg, #777, #111);
                 }
 
-                #building {
+                #building, #small-building {
                     background: #444;
                     position: absolute;
                     right: 20%;
@@ -35,6 +40,13 @@
                     height: 50%;
                     z-index: 3;
                     background: linear-gradient(150deg, #666, #222);
+                }
+
+                #small-building {
+                    height: 40%;
+                    right: 38%;
+                    bottom: 22%;
+                    width: 9%
                 }
 
                 #control {
@@ -67,6 +79,8 @@
 		</div>
 
         <div id="building"></div>
+
+        <div id="small-building"></div>
 
         <div id="earth"></div>
 
