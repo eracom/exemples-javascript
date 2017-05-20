@@ -5,19 +5,19 @@
         <title>sliders</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>            
-                
-                body {
+        <style>
 
+                body {
                     margin: 0;
                 }
+
                 #sky {
                     height: 100%;
                     width: 100%;
                     background: linear-gradient(175deg, red, blue);
                     position: absolute;
                     z-index: 1; 
-                    transition: all 1s ease;     
+                    transition: all 1s ease;
                 }
 
                 #earth {
@@ -51,7 +51,7 @@
 
                 #control {
                     left: 10%;
-                    bottom: 10%; 
+                    bottom: 10%;
                     position: absolute;
                     z-index: 10;
                 }
@@ -70,10 +70,10 @@
 
         <div id="control">
 
-        	<input type="range" min="-180" max="180" value="0" id="faderA" 
+        	<input type="range" min="-180" max="180" value="0" id="faderA"
 	step="1" oninput="outputUpdateA(value)">
 
-            <input type="range" min="0" max="360" value="240" id="faderB" 
+            <input type="range" min="0" max="360" value="240" id="faderB"
             step="1" oninput="outputUpdateB(value)">
 
 		</div>
@@ -115,7 +115,7 @@
 
         }
 
-        // see 
+        // see
         // http://thenewcode.com/757/Playing-With-The-HTML5-range-Slider-Input
         // http://www.html5tutorial.info/html5-range.php
 
