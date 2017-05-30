@@ -71,6 +71,8 @@
        <button type="button" class="click">js:click</button>
 
        <button type="button" class="mouseover">js:mouseover/out</button>
+
+       <button type="button" class="mouseenter">js:mouseenter/leave</button>
         
        <button type="button" class="jsfocus">js:focus/blur</button>
 
@@ -83,8 +85,10 @@
        <ul class="status">
 
            <li>js clicks: <span class="clicks">0</span></li>
-           <li>js mouseovers: <span class="hovers">0</span></li> 
-           <li>js mouseouts: <span class="exits">0</span></li> 
+           <li>js mouseOvers: <span class="hovers">0</span></li> 
+           <li>js mouseOuts: <span class="exits">0</span></li> 
+           <li>js mouseEnters: <span class="enters">0</span></li>
+           <li>js mouseLeaves: <span class="leaves">0</span></li> 
            <li>js focus: <span class="focuses">0</span></li>
            <li>js blur: <span class="blurs">0</span></li> 
        </ul>
@@ -120,6 +124,34 @@
         );
         var NumberOfHovers = 0;
         var NumberOfExits = 0;
+
+        
+        // On mesure les MouseEnter / MouseLeave :
+
+        /* 
+         *
+         * https://developer.mozilla.org/en/docs/Web/Events/mouseenter
+         * http://api.jquery.com/mouseover/
+
+        mouseenter = Similar to mouseover, it differs in that 
+        it doesn't bubble and that it isn't sent 
+        when the pointer is moved from one of its descendants' 
+        physical space to its own physical space.
+
+        With deep hierarchies, the amount of mouseenter events sent 
+        can be quite huge and cause significant performance problems. 
+        In such cases, it is better to listen for mouseover events.
+        */
+
+        document.querySelector(".mouseenter").addEventListener(
+          "mouseenter", mouseEntering, false
+        );
+        document.querySelector(".mouseenter").addEventListener(
+          "mouseleave", mouseLeaving, false
+        );
+
+        var NumberOfEnters = 0;
+        var NumberOfLeaves = 0;
 
         // focus and blur
 
@@ -162,6 +194,21 @@
         event.target.style.backgroundColor = "#ddd";
         NumberOfExits++;
         document.querySelector(".exits").innerHTML = NumberOfHovers;
+      
+      }
+
+      function mouseEntering(KeyEvent) {
+        event.target.style.backgroundColor = "yellow";
+        NumberOfEnters++;
+        console.log(NumberOfEnters);
+        document.querySelector(".enters").innerHTML = NumberOfEnters;
+      
+      }
+
+      function mouseLeaving(KeyEvent) {
+        event.target.style.backgroundColor = "#ddd";
+        NumberOfLeaves++;
+        document.querySelector(".leaves").innerHTML = NumberOfLeaves;
       
       }
 
