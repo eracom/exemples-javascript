@@ -89,3 +89,11 @@ Un exemple d'animation CSS.
 Un graphique animé en CSS, selon un exemple de Lea Verou.
 
 ---
+
+### gradient-corners.html
+
+Un effet de coin transparent, obtenu avec un dégradé CSS.
+
+* [Page d'exemple](gradient-corners.html)
+* [Article de Lea Verou](http://lea.verou.me/2011/03/beveled-corners-negative-border-radius-with-css3-gradients/) sur cette technique
+* [Documentation couleurs et dégradés](http://cours-web.ch/css/color)
