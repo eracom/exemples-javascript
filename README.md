@@ -90,7 +90,7 @@ Un graphique animé en CSS, selon un exemple de Lea Verou.
 
 ---
 
-### gradient-corners.html
+### [gradient-corners.html](gradient-corners.html)
 
 Un effet de coin transparent, obtenu avec un dégradé CSS.
 
