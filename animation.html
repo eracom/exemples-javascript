@@ -40,41 +40,80 @@
 			}
 			
 			.object:hover, .runpulse {
-				animation-name: pulse;
-				animation-duration: 1s;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
-			}
-			
-			.focus:focus, .runfocus {
-				animation-name: grow;
-				animation-duration: 1s;
-				animation-iteration-count: 1;
-				animation-fill-mode: both;
-			}
-			
-			@keyframes grow {
-				
-				to {
-					transform: scale(1.2);
-					transform: translateX(25px) rotate(-45deg);
-					background-color: green;
-					color: white;
-				}
-			}
-			
-			@keyframes pulse {
-			    0%, 100% {
-			        background-color: #ddd;
-			    }
-			    50% {
-			        transform: scale(1.5) rotate(90deg);
-			        background-color: orange;
-			    }
-			    100% {
-			        transform: scale(1) rotate(180deg);
-			    }
-			}
+        -webkit-animation-name: pulse;
+                animation-name: pulse;
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+      }
+      
+      .focus:focus, .runfocus {
+        -webkit-animation-name: grow;
+                animation-name: grow;
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+      }
+      
+      @-webkit-keyframes grow {
+        
+        to {
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2);
+          -webkit-transform: translateX(25px) rotate(-45deg);
+                  transform: translateX(25px) rotate(-45deg);
+          background-color: green;
+          color: white;
+        }
+      }
+      
+      @keyframes grow {
+        
+        to {
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2);
+          -webkit-transform: translateX(25px) rotate(-45deg);
+                  transform: translateX(25px) rotate(-45deg);
+          background-color: green;
+          color: white;
+        }
+      }
+      
+      @-webkit-keyframes pulse {
+          0%, 100% {
+              background-color: #ddd;
+          }
+          50% {
+              -webkit-transform: scale(1.5) rotate(90deg);
+                      transform: scale(1.5) rotate(90deg);
+              background-color: orange;
+          }
+          100% {
+              -webkit-transform: scale(1) rotate(180deg);
+                      transform: scale(1) rotate(180deg);
+          }
+      }
+      
+      @keyframes pulse {
+          0%, 100% {
+              background-color: #ddd;
+          }
+          50% {
+              -webkit-transform: scale(1.5) rotate(90deg);
+                      transform: scale(1.5) rotate(90deg);
+              background-color: orange;
+          }
+          100% {
+              -webkit-transform: scale(1) rotate(180deg);
+                      transform: scale(1) rotate(180deg);
+          }
+      }
 			
 			
         </style>
