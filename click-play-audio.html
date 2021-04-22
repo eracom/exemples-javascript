@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>click / play audio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+    <button class="playbutton" data-audio="audio1">play/pause</button>
+    <audio id="audio1" class="audio" controls src="media/short-audio-loop.mp3"></audio>
+
+    <br>
+
+    <button class="playbutton" data-audio="audio2">play/pause</button>
+    <audio id="audio2" class="audio" controls src="media/short-audio-loop.mp3"></audio>
+ 
+
+  <script>
+
+    // Src: Chris Bongers, https://daily-dev-tips.com/posts/vanilla-javascript-event-listener-on-multiple-elements/
+
+    document.addEventListener('click', function (event) {
+
+      if (!event.target.matches('.playbutton')) return;
+
+      event.preventDefault();
+
+      var audioElement = document.getElementById(event.target.dataset.audio);
+
+      if (audioElement.paused) {
+        audioElement.play();
+      }
+      else {
+        audioElement.pause();
+      }
+
+    });
+
+  </script>
+</body>
+
+</html>
