@@ -24,6 +24,13 @@ Exemple qui génère trois boîtes, et leur donne des positions aléatoires ... 
 
 ---
 
+### [click-play-audio.html](click-play-audio.html)
+
+Jouer ou mettre en pause un fichier audio.
+
+---
+
+
 ### [flexbox.html](flexbox.html)
 
 Exemple CSS utilisant Flexbox pour un centrage vertical. Utilise la propriété CSS `object-fit` pour une image plein-écran. Cet exemple contient 0% de JavaScript.
