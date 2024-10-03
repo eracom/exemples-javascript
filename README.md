@@ -30,6 +30,12 @@ Jouer ou mettre en pause un fichier audio.
 
 ---
 
+### [click-play-audio-2.html](click-play-audio-2.html)
+
+Jouer un fichier audio. Cette version alternative est adaptée à la structure de code de Readymag.
+
+---
+
 
 ### [flexbox.html](flexbox.html)
 
