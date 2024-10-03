@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio with JS</title>
+    <style>
+
+        /* rend invisible les fichiers vidéo / audio servant de source sonore */
+        div[data-id="videoMP4"],
+        div[data-id="audioMP3"] {
+           display: none;
+        }
+
+        button {
+            margin : 1rem;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-id="trigger1">
+        <button>play mp4</button>
+    </div>
+    <div data-id="trigger2">
+        <button>play mp3</button>
+    </div>
+
+    <div data-id="videoMP4">
+        <video>
+            <source src="media/short-audio-loop.mp4">
+        </video>
+    </div>
+    
+    <div data-id="audioMP3">
+        <audio src="media/short-audio-loop.mp3"></audio>
+    </div>
+
+</body>
+<script>
+    document.addEventListener( "DOMContentLoaded", function () {
+        
+        // les boutons qui déclenchent le son
+        // bouton 1
+        var trigger1 = document.querySelector( '[data-id="trigger1"]' );
+        // bouton 2
+        var trigger2 = document.querySelector( '[data-id="trigger2"]' );
+
+        // lien avec la source sonore
+        // source sonore 1
+        trigger1.addEventListener("click", 
+            playsound.bind( trigger1, "[data-id='videoMP4'] video" )
+        );
+        // source sonore 2
+        trigger2.addEventListener("click", 
+            playsound.bind( trigger1, "[data-id='audioMP3'] audio" )
+        );
+
+        function playsound( mediaID ) {
+            document.querySelector( mediaID ).play();
+        }
+
+    });
+</script>
+
+</html>
